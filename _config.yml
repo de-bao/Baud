@@ -5,9 +5,33 @@ url: "https://de-bao.github.io"
 
 # 构建设置
 markdown: kramdown
+highlighter: rouge
 theme: minima
+permalink: /:categories/:title/
+
+# 插件
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# 分页设置
+paginate: 5
+paginate_path: "/page:num/"
+
+# 排除文件
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - .gitignore
+
+# 包含文件
+include:
+  - _pages
 
 # 作者信息
 author:
@@ -16,9 +40,27 @@ author:
   github: "de-bao"
   zhihu: "baud-17"
   csdn: "qq_54707385"
+  bio: "热爱技术的开发者，喜欢探索新技术和解决有趣的问题"
 
 # 社交链接
 social_links:
   github: "https://github.com/de-bao"
   zhihu: "https://www.zhihu.com/people/baud-17"
   csdn: "https://blog.csdn.net/qq_54707385"
+
+# 导航菜单
+navigation:
+  - title: 首页
+    url: /
+  - title: 博客
+    url: /blog/
+  - title: 标签
+    url: /tags/
+  - title: 归档
+    url: /archive/
+  - title: 关于
+    url: /about/
+
+# SEO 设置
+lang: zh-CN
+timezone: Asia/Shanghai
